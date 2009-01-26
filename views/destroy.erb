@@ -2,7 +2,7 @@
 <form id="slide_destroy" action="/<%= @slide.id %>" method="post">
 	<h1>are you sure you want to delete this slide?</h1>
 	<input type="hidden" name="_method" value="delete" />
-	<button>delete the slide</button> or <a href="/#slide_<%= @slide.id %>">Cancel</a>
+	<button>delete the slide</button> or <a href="/#slide_<%= @slide.id %>">cancel</a>
 </form>
 
 <div id="slide_<%= @slide.id %>" class="slide">

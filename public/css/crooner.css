@@ -19,7 +19,7 @@ div.slide {
 	width:800px;
 	height:600px;
 	background:#fff;
-	margin:0 auto 0 auto;
+	margin:0 auto 200px auto;
 	padding:20px;
 }
 
@@ -27,7 +27,7 @@ form#slide_destroy {
 	width:800px;
 	background:red;
 	color:#fff;
-	margin:0 auto 0 auto;
+	margin:0 auto 40px auto;
 	padding:20px;
 }
 form#slide_destroy a {
@@ -58,6 +58,20 @@ textarea {
 	padding:10px;
 	height:400px;
 	font-size:45pt;
+}
+
+.little_help {
+	font-size:11px; 
+	color:#666; 
+	background:#eaeaea; 
+	border:1px solid #ccc;
+	padding:5px;
+	float:right;
+	
+}
+
+.clear {
+	
 }
 
 div#nav {
