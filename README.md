@@ -26,12 +26,12 @@ brian@westcoastlogic.com
 
 ## todo
 
-- add jquery for smooth transitions
 - slide partial
 - form partial 
 
 ## changelog
 
+- click scrolls to slide
 - drag and drop reorder slides
 - silk icons for edit and delete
 - adding a new slide navigates to that slide once its created
