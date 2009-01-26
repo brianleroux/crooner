@@ -3,7 +3,7 @@ crooner
 
 Mostly good enough presentation software.
 
-## features:
+# features:
 
 - textile formatting
 - code syntax highlighting
@@ -26,12 +26,11 @@ brian@westcoastlogic.com
 
 ## todo
 
+- keyboard navigation
 - page reload highlights nav item
-- slide partial
-- form partial 
 - history scrolls
 - use float left layout
-
+- make the new form same looking as edit and delete views
 
 ## changelog
 

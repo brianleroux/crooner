@@ -15,6 +15,7 @@ a:hover {
 
 form#slide_new,
 div.slide {
+	border-top:20px solid #000;
 	display:block;
 	width:800px;
 	height:600px;
@@ -26,7 +27,7 @@ div.slide {
 form#slide_edit div.description {
 	width:800px;
 	background:yellow;
-	margin:0 auto 40px auto;
+	margin:0 auto 0 auto;
 	padding:20px;
 }
 
@@ -34,7 +35,7 @@ form#slide_destroy {
 	width:800px;
 	background:red;
 	color:#fff;
-	margin:0 auto 40px auto;
+	margin:0 auto 0 auto;
 	padding:20px;
 }
 form#slide_destroy a {
@@ -85,7 +86,7 @@ div#nav {
 	position:fixed;
 	top:0;
 	left:0;
-	width:200px;
+	width:212px;
 	z-index:1;
 	background:#fff;
 	padding:20px;
@@ -115,9 +116,6 @@ div#nav ul li a:hover {
 	text-decoration:none;
 }
 
-div.slide {
-	margin:0 auto 200px auto;
-}
 
 div.slide div.title {
 	font-size:55pt;

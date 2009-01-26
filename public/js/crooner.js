@@ -41,11 +41,24 @@ $(function(){
 			{
 				var targetOffset = $target.offset().top;
 				$('html,body').animate({scrollTop: targetOffset}, 900);
-				$(this).parent().parent().children().removeClass('highlight');
+				$('div#nav ul li').removeClass('highlight');
 				$(this).parent().addClass('highlight');
 				return false;
 			} 			
 		}
+	});
+	
+	// keyboard shortcuts
+	$(window).keypress(function(e){
+		var code = (e.keyCode ? e.keyCode : e.which);
+		switch(code) {
+			case 38: // up
+				
+			break;
+			
+			case 40: // down
+			break;   
+		};
 	});
 	
 	

@@ -58,7 +58,7 @@ end
 # updates a slide
 put '/:id' do
   Slide.get(params[:id]).update_attributes(params[:slide])
-  redirect '/#slide_' + params[:id]
+  redirect "/#slide_#{ params[:id] }"
 end 
 
 # destroys a slide
