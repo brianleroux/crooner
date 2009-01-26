@@ -12,6 +12,7 @@ a:hover {
 	text-decoration:underline;
 }
 
+
 form#slide_new,
 div.slide {
 	display:block;
@@ -104,9 +105,12 @@ div#nav ul li {
 	height:22px;
 	line-height:22px;
 }
-div#nav ul li a {
-	
-}	
+
+div#nav ul li.highlight {
+	background:#ffffcc;
+}
+
+
 div#nav ul li a:hover {
 	text-decoration:none;
 }

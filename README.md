@@ -26,15 +26,16 @@ brian@westcoastlogic.com
 
 ## todo
 
+- page reload highlights nav item
 - slide partial
 - form partial 
-- highlight in menu
-- keep location history
+- history scrolls
 - use float left layout
 
 
 ## changelog
 
+- page highlights in global nav
 - bug: global nav links fail on edit or delete 
 - click scrolls to slide
 - drag and drop reorder slides
