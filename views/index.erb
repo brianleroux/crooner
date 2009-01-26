@@ -1,0 +1,17 @@
+<form id="slide_new" action="/" method="post">
+	<div class="formrow">
+		<input tyep="text" name="slide[title]" />
+	</div>
+	<div class="formrow">
+  	<textarea name="slide[body]"></textarea>
+	</div>
+  <button>save new slide</button>
+</form>
+
+<h2>Slides</h2>
+<% Slide.all.each do |s| %>
+<div id="slide_<%= s.id %>" class="slide">
+	<div class="title"><%= s.title %> </div>
+	<div class="body"><%= RedCloth.new(s.body).to_html %></div>
+</div>
+<% end %>
