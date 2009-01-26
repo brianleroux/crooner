@@ -11,36 +11,15 @@
 		<script language="javascript" src="/vendor/SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
 		<script language="javascript" src="/vendor/SyntaxHighlighter/Scripts/shBrushXml.js"></script>
 		<script src="/js/jquery-1.3.1.min.js" type="text/javascript" charset="utf-8"></script>
-		
-		<script language="javascript">
-		$(function(){
-			
-			// in ur slides highlighin ur syntaxes
-			dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
-			dp.SyntaxHighlighter.HighlightAll('code');	
-			
-			// hide all the editing controls 
-			$('div#nav ul li a.control').hide();
-			
-			// unless the presentor is mousing around
-			$('div#nav ul li').hover(
-				function(){ $(this).children('.control').show(); },
-				function(){ $(this).children('.control').hide(); }
-			);
-			
-			// 
-			
-		///	
-		});
-		</script>
+		<script src="/js/jquery-ui-personalized-1.6rc5.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/crooner.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="nav">
+			<a href="#slide_new">new slide</a><hr />
 			<ul>
-				<li><a href="#slide_new">new slide</a></li>
-				<li><hr /></li>
-				<% Slide.all.each do |s| %>
-				<li>
+				<% Slide.all(:order=>[:position]).each do |s| %>
+				<li id="slide_control_<%= s.id %>">
 					<a href="#slide_<%= s.id %>"><%= s.title %></a> 
 					<a href="/<%= s.id %>/edit" class="control"><img src="/images/edit.png" alt="edit" /></a> 
 					<a href="/<%= s.id %>/destroy" class="control"><img src="/images/delete.png" alt="delete" /></a>

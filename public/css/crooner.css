@@ -48,6 +48,10 @@ a img {
 	border:none;
 }
 
+hr {
+	border:1px solid #ccc;
+}
+
 textarea {
 	border:3px dotted #ccc;
 	margin:0 0 20px 0;
@@ -60,6 +64,7 @@ div#nav {
 	position:fixed;
 	top:0;
 	left:0;
+	width:200px;
 	z-index:1;
 	background:#fff;
 	padding:20px;
@@ -70,6 +75,20 @@ div#nav ul {
 	margin:0;
 	padding:0;
 	list-style:none;
+}
+
+div#nav ul li {
+	padding:5px 5px 5px 20px;
+	background:#eaeaea;
+	margin:0 0 1px 0;
+	height:22px;
+	line-height:22px;
+}
+div#nav ul li a {
+	
+}	
+div#nav ul li a:hover {
+	text-decoration:none;
 }
 
 div.slide {

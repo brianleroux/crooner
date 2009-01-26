@@ -14,6 +14,12 @@ configure do
     before :create do
       self.position = Slide.all.size + 1
     end 
+    
+    def self.sort(ids)
+      ids.each_with_index do |id, index| 
+        Slide.get(id).update_attributes(:position=>index)
+      end
+    end 
   end
 
   DataMapper.auto_upgrade!
@@ -21,6 +27,7 @@ end
 
 # ur presentation
 get '/' do
+  @slides = Slide.all(:order=>[:position])
   erb :index
 end
 
@@ -40,6 +47,13 @@ end
 post '/' do
   redirect "/#slide_#{ Slide.create(params[:slide]).id }"
 end
+
+# updates a presentation (the slide collection)
+# only via ajax
+put '/' do
+  Slide.sort(params[:ids].split(','))
+  status 200
+end 
 
 # updates a slide
 put '/:id' do
