@@ -28,9 +28,14 @@ brian@westcoastlogic.com
 
 - slide partial
 - form partial 
+- highlight in menu
+- keep location history
+- use float left layout
+
 
 ## changelog
 
+- bug: global nav links fail on edit or delete 
 - click scrolls to slide
 - drag and drop reorder slides
 - silk icons for edit and delete

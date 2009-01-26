@@ -13,13 +13,19 @@ a:hover {
 }
 
 form#slide_new,
-form#slide_edit,
 div.slide {
 	display:block;
 	width:800px;
 	height:600px;
 	background:#fff;
 	margin:0 auto 200px auto;
+	padding:20px;
+}
+
+form#slide_edit div.description {
+	width:800px;
+	background:yellow;
+	margin:0 auto 40px auto;
 	padding:20px;
 }
 
@@ -35,7 +41,6 @@ form#slide_destroy a {
 }
 
 
-textarea,
 input {
 	font-size:55pt;
 	width:776px;
@@ -57,7 +62,8 @@ textarea {
 	margin:0 0 20px 0;
 	padding:10px;
 	height:400px;
-	font-size:45pt;
+	width:776px;
+	font-size:22pt;
 }
 
 .little_help {
@@ -114,5 +120,5 @@ div.slide div.title {
 	margin:0 0 20px 0;
 }
 div.slide div.body {
-	font-size:45pt;
+	font-size:22pt;
 }

@@ -30,6 +30,7 @@ $(function(){
 		}
 	});
 	
+	// ONLY if we're in teh app root
 	// click scrolls to slide 
 	$('a[href*=#]').click(function() {
 	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

@@ -16,11 +16,11 @@
 	</head>
 	<body>
 		<div id="nav">
-			<a href="#slide_new">new slide</a><hr />
+			<a href="/#slide_new">new slide</a><hr />
 			<ul>
 				<% Slide.all(:order=>[:position]).each do |s| %>
 				<li id="slide_control_<%= s.id %>">
-					<a href="#slide_<%= s.id %>"><%= s.title %></a> 
+					<a href="/#slide_<%= s.id %>"><%= s.title %></a> 
 					<a href="/<%= s.id %>/edit" class="control"><img src="/images/edit.png" alt="edit" /></a> 
 					<a href="/<%= s.id %>/destroy" class="control"><img src="/images/delete.png" alt="delete" /></a>
 				</li>
