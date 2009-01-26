@@ -24,7 +24,8 @@
 				<% Slide.all.each do |s| %>
 				<li>
 					<a href="#slide_<%= s.id %>"><%= s.title %></a> 
-					<a href="/<%= s.id %>/edit">edit</a> or <a href="/<%= s.id %>/destroy">delete</a>
+					<a href="/<%= s.id %>/edit"><img src="/images/edit.png" alt="edit" /></a> 
+					<a href="/<%= s.id %>/destroy"><img src="/images/delete.png" alt="delete" /></a>
 				</li>
 				<% end %>
 			</ul>

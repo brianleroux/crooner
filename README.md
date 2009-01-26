@@ -1,33 +1,37 @@
 crooner
----
+===
 
-mostly good enough presentation software.
+Mostly good enough presentation software.
 
-features:
+## features:
 
 - textile formatting
 - code syntax highlighting
 - simple navigation
 
-quickly built with 
+## quickly built with 
 
-- sinatra (http://sinatra.github.com)
-- datamapper (http://datamapper.org)
-- syntaxhighlighter (http://code.google.com/p/syntaxhighlighter/)
+- http://sinatra.github.com
+- http://datamapper.org
+- http://code.google.com/p/syntaxhighlighter
 
 
-to start the application run
+## to start the application run
 
 	ruby crooner.rb
 	
-and browse localhost:4567 (all the normal sinatra options apply)	
+## contact
 
-todo
+brian@westcoastlogic.com	
+
+## todo
 
 - drag and drop reorder slides
 - add jquery for smooth transitions
+- slide partial
+- form partial 
+
+## changelog
+
 - silk icons for edit and delete
-
-changelog
-
 - adding a new slide navigates to that slide once its created

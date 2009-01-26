@@ -5,6 +5,13 @@ body {
 	background:#000;
 }
 
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
 form#slide_new,
 form#slide_edit,
 div.slide {
@@ -35,6 +42,10 @@ input {
 	border:3px dotted #ccc;
 	margin:0 0 20px 0;
 	padding:10px;
+}
+
+a img {
+	border:none;
 }
 
 textarea {
