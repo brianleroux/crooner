@@ -1,102 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 	<head>
-		<title>slide show name</title>
-		<style type="text/css">
-		
-		body {
-			border:none;
-			margin:0;
-			padding:0;
-			background:#000;
-		}
-		
-		form#slide_new,
-		form#slide_edit,
-		div.slide {
-			display:block;
-			width:800px;
-			height:600px;
-			background:#fff;
-			margin:0 auto 0 auto;
-			padding:20px;
-		}
-		
-		form#slide_destroy {
-			width:800px;
-			background:red;
-			color:#fff;
-			margin:0 auto 0 auto;
-			padding:20px;
-		}
-		form#slide_destroy a {
-			color:#fff;
-		}
-		
-		
-		textarea,
-		input {
-			font-size:55pt;
-			width:776px;
-			border:3px dotted #ccc;
-			margin:0 0 20px 0;
-			padding:10px;
-		}
-		
-		textarea {
-			border:3px dotted #ccc;
-			margin:0 0 20px 0;
-			padding:10px;
-			height:400px;
-			font-size:45pt;
-		}
-		
-		div#nav {
-			position:fixed;
-			top:0;
-			left:0;
-			z-index:1;
-			background:#fff;
-			padding:20px;
-			margin:20px;
-		}
-		
-		div#nav ul {
-			margin:0;
-			padding:0;
-			list-style:none;
-		}
-		
-		div#nav ul li {
-			
-		}
-		
-		div.slide {
-			margin:0 auto 200px auto;
-		}
-		
-		div.slide div.title {
-			font-size:55pt;
-			margin:0 0 20px 0;
-		}
-		div.slide div.body {
-			font-size:45pt;
-		}
-		div.slide div.options {
-			
-		}
-		</style>
-		<link type="text/css" rel="stylesheet" href="dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
-		<script language="javascript" src="dp.SyntaxHighlighter/Scripts/shCore.js"></script>
-		<script language="javascript" src="dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
-		<script language="javascript" src="dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
-		<script language="javascript" src="dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
-		<script language="javascript" src="dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+		<title>crooner</title>
+		<link type="text/css" rel="stylesheet" href="/crooner.css"></link>
+		<link type="text/css" rel="stylesheet" href="/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+		<script language="javascript" src="/dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+		<script language="javascript" src="/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+		<script language="javascript" src="/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+		<script language="javascript" src="/dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>
+		<script language="javascript" src="/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+		<script language="javascript">
+		window.onload = function(e) {
+			dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+			dp.SyntaxHighlighter.HighlightAll('code');	
+		};
+		</script>
 	</head>
 	<body>
 		<div id="nav">
 			<ul>
-				<li><a href="#new_slide">new slide</a></li>
+				<li><a href="#slide_new">new slide</a></li>
 				<li><hr /></li>
 				<% Slide.all.each do |s| %>
 				<li>
@@ -107,9 +30,5 @@
 			</ul>
 		</div>
 		<%= yield %>
-		<script language="javascript">
-		dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
-		dp.SyntaxHighlighter.HighlightAll('code');
-		</script>
 	</body>
 </html>

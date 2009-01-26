@@ -1,8 +1,4 @@
-require 'rubygems' 
-require 'sinatra'
-require 'dm-core'
-require 'dm-timestamps'
-require 'RedCloth'
+%w(rubygems sinatra dm-core dm-timestamps RedCloth).each { |x| require x  }
 
 configure do 
   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/slides.sqlite3")
