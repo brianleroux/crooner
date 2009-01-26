@@ -15,9 +15,22 @@
 		<script language="javascript">
 		$(function(){
 			
+			// in ur slides highlighin ur syntaxes
 			dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
 			dp.SyntaxHighlighter.HighlightAll('code');	
 			
+			// hide all the editing controls 
+			$('div#nav ul li a.control').hide();
+			
+			// unless the presentor is mousing around
+			$('div#nav ul li').hover(
+				function(){ $(this).children('.control').show(); },
+				function(){ $(this).children('.control').hide(); }
+			);
+			
+			// 
+			
+		///	
 		});
 		</script>
 	</head>
@@ -29,8 +42,8 @@
 				<% Slide.all.each do |s| %>
 				<li>
 					<a href="#slide_<%= s.id %>"><%= s.title %></a> 
-					<a href="/<%= s.id %>/edit"><img src="/images/edit.png" alt="edit" /></a> 
-					<a href="/<%= s.id %>/destroy"><img src="/images/delete.png" alt="delete" /></a>
+					<a href="/<%= s.id %>/edit" class="control"><img src="/images/edit.png" alt="edit" /></a> 
+					<a href="/<%= s.id %>/destroy" class="control"><img src="/images/delete.png" alt="delete" /></a>
 				</li>
 				<% end %>
 			</ul>
