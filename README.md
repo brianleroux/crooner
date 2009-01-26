@@ -27,3 +27,7 @@ todo
 - drag and drop reorder slides
 - add jquery for smooth transitions
 - silk icons for edit and delete
+
+changelog
+
+- adding a new slide navigates to that slide once its created

@@ -19,36 +19,35 @@ configure do
   DataMapper.auto_upgrade!
 end 
 
-# list the notes
+# ur presentation
 get '/' do
   erb :index
 end
 
-# edit form for a note
+# edit form for a slide
 get '/:id/edit' do
   @slide = Slide.get(params[:id])
   erb :edit
 end 
 
-# confirmation page for deleting a note
+# confirmation page for deleting a slide
 get '/:id/destroy' do
   @slide = Slide.get(params[:id])
   erb :destroy
 end 
 
-# creates a note
+# creates a slide
 post '/' do
-  Slide.create(params[:slide])
-  redirect '/'
+  redirect "/#slide_#{ Slide.create(params[:slide]).id }"
 end
 
-# updates a note
+# updates a slide
 put '/:id' do
   Slide.get(params[:id]).update_attributes(params[:slide])
   redirect '/#slide_' + params[:id]
 end 
 
-# destroys a note
+# destroys a slide
 delete '/:id' do
   Slide.get(params[:id]).destroy
   redirect '/'
