@@ -1,17 +1,3 @@
-<form id="slide_new" action="/" method="post">
-	<div class="formrow">
-		<input tyep="text" name="slide[title]" />
-	</div>
-	<div class="formrow">
-  	<textarea name="slide[body]"></textarea>
-	</div>
-  <button>save new slide</button>
-	<div class="little_help clear">
-		To activate the syntax highlighting:
-		&lt;pre name="code" class="ruby|jscript|css|xml"&gt;your code here&lt;/pre&gt; and you can find a <a href="http://hobix.com/textile/">textile reference here</a>.
-	</div>
-</form>
-
 <div id="slides">
 <% @slides.each do |s| %>
 	<div id="slide_<%= s.id %>" class="slide">

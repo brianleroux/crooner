@@ -16,10 +16,14 @@
 	</head>
 	<body>
 		<div id="nav">
-			<a href="/#slide_new">new slide</a><hr />
+			<form id="slide_new" action="/" method="post">
+					<input type="hidden" name="slide[title]" value="untitled" />
+					<input type="hidden" name="slide[body]" value=" " />
+			  	<button>add a new slide</button>
+			</form>
 			<ul>
 				<% Slide.all(:order=>[:position]).each do |s| %>
-				<li id="slide_control_<%= s.id %>">
+				<li id="slide_control_<%= s.id %>" class="<%= 'highlight' if s.position == 0 %>">
 					<a href="/#slide_<%= s.id %>"><%= s.title %></a> 
 					<a href="/<%= s.id %>/edit" class="control"><img src="/images/edit.png" alt="edit" /></a> 
 					<a href="/<%= s.id %>/destroy" class="control"><img src="/images/delete.png" alt="delete" /></a>

@@ -48,19 +48,31 @@ $(function(){
 		}
 	});
 	
+	
+	
 	// keyboard shortcuts
+	/*
+	var index = 0;
 	$(window).keypress(function(e){
 		var code = (e.keyCode ? e.keyCode : e.which);
-		switch(code) {
-			case 38: // up
+		var up = 38;
+		var down = 40;
+		var slides = $('a[href*=#]');
+		
+		index = (code == up ? index-- : index++);
+		if( index < 0 ) index = 0;
+		if( index > slides.length) index = slides.length - 1;
+		
 				
-			break;
-			
-			case 40: // down
-			break;   
-		};
+		var currentSlide = slides[index];
+
+		// var $target = $(this.hash);	
+		// $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+		alert(currentSlide.href);
+
+
 	});
-	
+	*/
 	
 ///	
 });

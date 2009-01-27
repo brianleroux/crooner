@@ -27,13 +27,14 @@ brian@westcoastlogic.com
 ## todo
 
 - keyboard navigation
-- page reload highlights nav item
 - history scrolls
 - use float left layout
-- make the new form same looking as edit and delete views
 
 ## changelog
 
+- make the new form same looking as edit and delete views
+- page reload highlights first nav item
+- scroll to first slide onload
 - page highlights in global nav
 - bug: global nav links fail on edit or delete 
 - click scrolls to slide

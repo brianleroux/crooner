@@ -45,7 +45,7 @@ end
 
 # creates a slide
 post '/' do
-  redirect "/#slide_#{ Slide.create(params[:slide]).id }"
+  redirect "/#{ Slide.create(params[:slide]).id }/edit"
 end
 
 # updates a presentation (the slide collection)

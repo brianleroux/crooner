@@ -12,8 +12,6 @@ a:hover {
 	text-decoration:underline;
 }
 
-
-form#slide_new,
 div.slide {
 	border-top:20px solid #000;
 	display:block;
@@ -22,6 +20,11 @@ div.slide {
 	background:#fff;
 	margin:0 auto 200px auto;
 	padding:20px;
+}
+
+form#slide_new button {
+	width:100%;
+	margin:0 0 5px 0;
 }
 
 form#slide_edit div.description {
