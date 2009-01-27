@@ -2,7 +2,12 @@
 	<input type="hidden" name="_method" value="put" />
 	
 	<div class="description">
-		<button>save changes to slide</button> or <a href="/#slide_<%= @slide.id %>">cancel</a>
+		<button>save changes to slide</button> or 
+		<% if @slide.title == 'untitled' && @slide.body == ' ' %>
+			<a href="/<%= @slide.id %>" class="delete_new_slide">cancel adding new slide</a>
+		<% else %>
+			<a href="/#slide_<%= @slide.id %>">cancel</a>
+		<% end %>
 	</div>
 	
 	<div class="slide">

@@ -48,6 +48,12 @@ $(function(){
 		}
 	});
 	
+	$('a.delete_new_slide').click(function(e){
+		$.post( this.href, {_method:'delete'}, function(){
+			window.location = '/';
+		});
+		return false;
+	});
 	
 	
 	// keyboard shortcuts
