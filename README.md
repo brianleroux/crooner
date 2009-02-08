@@ -24,11 +24,14 @@ Mostly good enough presentation software.
 
 brian@westcoastlogic.com	
 
-## todo
+## _coming soon!_
 
 - keyboard navigation
 - history scrolls
 - use float left layout
+- export as static html
+- embed widget
+- phonegap based iphone controller
 
 ## changelog
 

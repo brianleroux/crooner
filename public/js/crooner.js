@@ -32,22 +32,16 @@ $(function(){
 	
 	// click scrolls to slide 
 	$('a[href*=#]').click(function() {
-		if( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-			var $target = $(this.hash);	
-			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-			if($target.length) 
-			{
-				var targetOffset = $target.offset().top;
-				$('html,body').animate({scrollTop: targetOffset}, 900);
-				$('div#nav ul li').removeClass('highlight');
-				$(this).parent().addClass('highlight');
-				return false;
-			} 			
-		}
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	        var element = $(this.hash).length && $(this.hash) || $('[name=' + this.hash.slice(1) +']');
+			var offset = element.offset().top; 
+	        $('html,body').animate({scrollTop: offset}, 900);
+			$('div#nav ul li').removeClass('highlight');
+			$(this).parent().addClass('highlight');
+	    }
 	});
 	
+	// when a new slide is created clicking cancel deletes it
 	$('a.delete_new_slide').click(function(e){
 		$.post( this.href, {_method:'delete'}, function(){
 			window.location = '/';
@@ -55,30 +49,53 @@ $(function(){
 		return false;
 	});
 	
-	
-	// keyboard shortcuts
-	/*
+	// keyboard navigation for up, left, right and down keys
+	// c create, d delete, e edit
 	var index = 0;
-	$(window).keypress(function(e){
-		var code = (e.keyCode ? e.keyCode : e.which);
-		var up = 38;
-		var down = 40;
-		var slides = $('a[href*=#]');
-		
-		index = (code == up ? index-- : index++);
-		if( index < 0 ) index = 0;
-		if( index > slides.length) index = slides.length - 1;
-		
-				
-		var currentSlide = slides[index];
-
-		// var $target = $(this.hash);	
-		// $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-		alert(currentSlide.href);
-
-
-	});
-	*/
+	var offset = 0;
 	
-///	
+	$(document).keydown(function(e) {
+		var go = function(direction) {
+
+			var slides = $('.slide');
+			var max = slides.length;
+			var min = 0;
+
+			this.up = function() {
+				if (index > min) index--;
+				return index;
+			};
+
+			this.down = function() {
+				if (index < max) index++;
+				return index;		
+			};
+			
+			index = this[direction]();
+			offset = $(slides[index]).offset().top;
+			
+			$('html,body').animate({scrollTop: offset}, 900);
+			
+			$('div#nav ul li').removeClass('highlight');
+			var nav = slides[index].id.replace('slide_', '#slide_control_');
+			$(nav).addClass('highlight');
+		};
+		
+		var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+
+		var keys = {
+			0:function(){}, 
+			37:function(){go('up')}, // left
+			38:function(){go('up')},
+			39:function(){go('down')}, // right
+			40:function(){go('down')}
+		};
+		
+		try {
+			keys[key]();
+		} catch( e ) {
+			// ignore other keys
+		};
+	});
+/// ---	
 });
