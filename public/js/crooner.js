@@ -30,6 +30,10 @@ $(function(){
 		}
 	});
 	
+	// default highlight
+	var url = location.hash.replace('#slide_', '#slide_control_');
+	$(url).addClass('highlight');
+	
 	// click scrolls to slide 
 	$('a[href*=#]').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -68,6 +72,7 @@ $(function(){
 
 			this.down = function() {
 				if (index < max) index++;
+				if (index == max) index = min;
 				return index;		
 			};
 			
@@ -81,6 +86,16 @@ $(function(){
 			$(nav).addClass('highlight');
 		};
 		
+		var editSlide = function() {
+			window.location = $('li.highlight')[0].id.replace('slide_control_','') + '/edit'
+		};
+		var deleteSlide = function() {
+			window.location = $('li.highlight')[0].id.replace('slide_control_','') + '/destroy'
+		};
+		var createSlide = function() {
+			$('form#slide_new').submit();
+		};
+		
 		var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
 
 		var keys = {
@@ -88,7 +103,10 @@ $(function(){
 			37:function(){go('up')}, // left
 			38:function(){go('up')},
 			39:function(){go('down')}, // right
-			40:function(){go('down')}
+			40:function(){go('down')},
+			69:function(){editSlide()},
+			68:function(){deleteSlide()},
+			67:function(){createSlide()}
 		};
 		
 		try {
@@ -97,5 +115,11 @@ $(function(){
 			// ignore other keys
 		};
 	});
+	
+	// help
+	$("a#toggle-help").click(function(e){ $("#help").toggle('slow') });
+	
+	// hide navigation
+	
 /// ---	
 });

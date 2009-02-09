@@ -23,13 +23,53 @@
 			</form>
 			<ul>
 				<% Slide.all(:order=>[:position]).each do |s| %>
-				<li id="slide_control_<%= s.id %>" class="<%= 'highlight' if s.position == 0 %>">
+				<li id="slide_control_<%= s.id %>">
 					<a href="/#slide_<%= s.id %>"><%= s.title %></a> 
 					<a href="/<%= s.id %>/edit" class="control"><img src="/images/edit.png" alt="edit" /></a> 
 					<a href="/<%= s.id %>/destroy" class="control"><img src="/images/delete.png" alt="delete" /></a>
 				</li>
 				<% end %>
 			</ul>
+			
+			<hr />
+			
+			<a id="toggle-help">How to..</a>
+			
+			<div id="help">
+			<h3>Shortcuts</h3>
+			<table>
+				<tr>
+					<th>action</th>
+					<th>key</th>
+				</tr>
+				<tr>
+					<td>create new slide</td>
+					<td>c</td>
+				</tr>
+				<tr>
+					<td>edit current slide</td>
+					<td>e</td>
+				</tr>
+				<tr>
+					<td>delete current slide</td>
+					<td>d</td>
+				</tr>
+				<tr>
+					<td>scroll down one slide</td>
+					<td>&uarr; or &larr;</td>
+				</tr>
+				<tr>
+					<td>scroll up one slide</td>
+					<td>&darr; or &rarr;</td>
+				</tr>
+			</table>
+			
+			<h3>Textile reference</h3>
+			<a href="http://hobix.com/textile/quick.html">Can be found here.</a>
+			
+			<h3>Syntax highlighter reference</h3>
+			&lt;pre name="code" class="ruby|xml|css|javascript"&gt;&lt;/pre&gt;
+			</div>
 		</div>
 		<%= yield %>
 	</body>

@@ -8,6 +8,7 @@ Mostly good enough presentation software.
 - textile formatting
 - code syntax highlighting
 - simple navigation
+- keyboard shortcuts for navigating up and down using the arrow keys
 
 ## quickly built with 
 
@@ -26,12 +27,13 @@ brian@westcoastlogic.com
 
 ## todo
 
-- keyboard navigation
-- history scrolls
-- use float left layout
+- preserve history when navigating by keyboard
+- hide navigation
+- prettier layouts
 
 ## changelog
 
+- keyboard navigation
 - make the new form same looking as edit and delete views
 - page reload highlights first nav item
 - scroll to first slide onload

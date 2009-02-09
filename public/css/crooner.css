@@ -127,3 +127,11 @@ div.slide div.title {
 div.slide div.body {
 	font-size:22pt;
 }
+
+a#toggle-help { 
+	cursor:pointer;
+}
+
+div#help {
+	display:none;
+}
