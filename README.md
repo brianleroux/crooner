@@ -30,6 +30,8 @@ brian@westcoastlogic.com
 - preserve history when navigating by keyboard
 - hide navigation
 - prettier layouts
+- notes on back of slide
+- multiple presentations
 
 ## changelog
 
