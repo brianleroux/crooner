@@ -103,10 +103,11 @@ $(function(){
 			37:function(){go('up')}, // left
 			38:function(){go('up')},
 			39:function(){go('down')}, // right
-			40:function(){go('down')},
+			40:function(){go('down')}
+			/*,
 			69:function(){editSlide()},
 			68:function(){deleteSlide()},
-			67:function(){createSlide()}
+			67:function(){createSlide()}*/
 		};
 		
 		try {
