@@ -90,6 +90,8 @@ div#nav {
 	top:0;
 	left:0;
 	width:212px;
+	height:300px;
+	overflow:auto;
 	z-index:1;
 	background:#fff;
 	padding:20px;
@@ -134,4 +136,14 @@ a#toggle-help {
 
 div#help {
 	display:none;
+}
+
+div.body table { 
+	width:100%;
+}
+
+div.body table tr td {
+	border-bottom:1px solid #ccc;
+	padding:20px;
+	font-size:22pt;
 }
