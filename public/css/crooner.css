@@ -15,7 +15,7 @@ a:hover {
 div.slide {
 	border-top:20px solid #000;
 	display:block;
-	width:800px;
+	width:1000px;
 	height:600px;
 	background:#fff;
 	margin:0 auto 200px auto;
@@ -89,12 +89,12 @@ div#nav {
 	position:fixed;
 	top:0;
 	left:0;
-	width:212px;
+	width:180px;
 	height:300px;
 	overflow:auto;
 	z-index:1;
 	background:#fff;
-	padding:20px;
+	padding:3px;
 	margin:20px;
 }
 
@@ -108,7 +108,7 @@ div#nav ul li {
 	padding:5px 5px 5px 20px;
 	background:#eaeaea;
 	margin:0 0 1px 0;
-	height:22px;
+	width:140px;
 	line-height:22px;
 }
 

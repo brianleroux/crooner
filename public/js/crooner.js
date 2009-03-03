@@ -99,6 +99,12 @@ $(function(){
 		 * 
 		 */
 		var keyboardNavigation = function() {
+			
+			// only enable keyboard nav on page if presenting
+			if ($('#slide_edit').size() == 1 || $('#slide_destroy').size() == 1) {
+				return;
+			}
+
 			var index = 0;
 			var offset = 0;
 
